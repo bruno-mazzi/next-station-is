@@ -1,0 +1,48 @@
+body, html {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background: url('../images/hikone_castle.jpg') center center no-repeat;
+    background-size: cover;
+    display: flex;
+    min-height: 100vh;
+}
+
+.item {
+    flex-grow:1;
+}
+
+.sign {
+    background: #404040;
+    margin: 5%;
+    padding: 1rem;
+    width: 50%;
+}
+
+.sign h1 {
+    color: #fff;
+    margin: 0;
+}
+
+.sign nav {
+    background: #101A0F;
+    overflow: auto;
+}
+
+.sign nav ul {
+    background: #232520;
+    margin:1rem 3rem;
+    padding: 0;
+}
+
+.sign nav li {
+    list-style-type: none;
+}
+
+.sign nav a {
+    color: #FDFB5E;
+    text-decoration: none;
+    text-transform: uppercase;
+}
