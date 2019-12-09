@@ -1,4 +1,53 @@
+@font-face {
+    font-family: 'led_counter';
+    src: url('../fonts/led_counter-7.woff2') format('woff2'),
+         url('../fonts/led_counter-7.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans-regular.woff2') format('woff2'),
+         url('../fonts/opensans-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('../fonts/opensans-semibold.woff2') format('woff2'),
+         url('../fonts/opensans-semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../fonts/opensans-bold.woff2') format('woff2'),
+         url('../fonts/opensans-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansextrabold';
+    src: url('../fonts/opensans-extrabold.woff2') format('woff2'),
+         url('../fonts/opensans-extrabold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../fonts/opensans-light.woff2') format('woff2'),
+         url('../fonts/opensans-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body, html {
+    font-size:62.5%;
     margin:0;
     padding:0;
 }
@@ -16,33 +65,71 @@ body {
 
 .sign {
     background: #404040;
+    border-bottom: 5px solid #6A7177;
+    border-radius:2px;
     margin: 5%;
-    padding: 1rem;
+    padding: 0;
     width: 50%;
 }
 
+.sign header {
+    margin:0 1.5rem;
+}
+
+.sign header:before {
+    border-right: 4rem solid #80c342;
+    content: "2";
+    color: #ccc;
+    float:left;
+    font-family: 'open_sansbold', arial, sans-serif;
+    font-size: 8rem;
+    margin-right: 2rem;
+    padding-right: 2rem;
+}
+
 .sign h1 {
-    color: #fff;
+    color: #ccc;
+    font-family: 'open_sanssemibold', arial, sans-serif;
+    font-size: 3rem;
+    margin:0;
+    padding: 0.5rem 0 0 0;
+}
+
+.sign h2 {
+    color: #ccc;
+    font-family: 'open_sansregular', arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
     margin: 0;
 }
 
 .sign nav {
     background: #101A0F;
+    clear:left;
+    margin:0 1.5rem 1.5rem 1.5rem;
     overflow: auto;
 }
 
 .sign nav ul {
     background: #232520;
-    margin:1rem 3rem;
-    padding: 0;
+    margin:1.5rem 4rem;
+    padding: 0.5rem;
 }
 
 .sign nav li {
+    font-size: 1.8rem;
     list-style-type: none;
 }
 
 .sign nav a {
     color: #FDFB5E;
+    display: block;
+    font-family: 'led_counter', arial, sans-serif;
+    letter-spacing: 0.2rem;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.sign nav a:after {
+    content: " ->";
 }
