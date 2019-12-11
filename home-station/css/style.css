@@ -135,7 +135,8 @@ body {
 }
 
 .sign2 {
-    background: #fff;
+    background: #fff url('../images/line-sign2.svg') center center no-repeat;
+    background-size: 100% auto;
     border-radius:2px;
     display: flex;
     float:right;
@@ -147,11 +148,15 @@ body {
 .sign2 h3 {
     color: #000;
     font-family: 'open_sanssemibold', arial, sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .sign2 h3 span {
     display: block;
+}
+
+.sign2 h3 span:nth-child(2) {
+    margin-top:40px;
 }
 
 .sign2 .item {
@@ -164,4 +169,28 @@ body {
 
 .sign2 .js-carrousel-next {
     text-align:right;
+}
+
+.sign2 .js-carrousel-prev, .sign2 .js-carrousel-next {
+    align-self: end;
+}
+
+.sign2 .js-carrousel-prev h3, .sign2 .js-carrousel-next h3 {
+    font-weight: 400;
+}
+
+.sign2 .js-carrousel-prev h3 {
+    padding-left: 1.5rem;
+}
+
+.sign2 .js-carrousel-next h3 {
+    padding-right: 1.5rem;
+}
+
+.sign2 .js-carrousel-prev h3 span:nth-child(1), .sign2 .js-carrousel-next h3 span:nth-child(1) {
+    color:#fff;
+}
+
+.sign2 .js-carrousel-prev h3 span:nth-child(2), .sign2 .js-carrousel-next h3 span:nth-child(2) {
+    margin:1rem 0;
 }
