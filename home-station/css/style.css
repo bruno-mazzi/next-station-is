@@ -55,6 +55,10 @@ body, html {
 body {
     background: url('../images/hikone_castle.jpg') center center no-repeat;
     background-size: cover;
+    min-height: 100vh;
+}
+
+.container {
     display: flex;
     min-height: 100vh;
 }
@@ -156,7 +160,7 @@ body {
 }
 
 .sign2 h3 span:nth-child(2) {
-    margin-top:40px;
+    margin-top:4rem;
 }
 
 .sign2 .item {
@@ -193,4 +197,79 @@ body {
 
 .sign2 .js-carrousel-prev h3 span:nth-child(2), .sign2 .js-carrousel-next h3 span:nth-child(2) {
     margin:1rem 0;
+}
+
+/* responsive */
+@media screen and (max-width: 1525px) {
+    .sign, .sign2 {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    .sign, .sign2 {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1185px) {
+    .sign h1 {
+        font-size: 2.5rem;
+    }
+
+    .sign h2 {
+        font-size: 1.5rem;
+    }
+
+    .sign nav li {
+        font-size: 1.5rem;
+    }
+
+    .sign2 h3 {
+        font-size: 1.5rem;;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .content {
+        flex-grow: 3;
+    }
+
+    .sign, .sign2 {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sign {
+        width: auto;
+    }
+
+    .sign2 {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .sign header::before {
+        font-size:7rem;
+    }
+    .sign h1 {
+        font-size: 1.5rem;
+    }
+
+    .sign h2 {
+        font-size: 1rem;
+    }
+
+    .sign2 h3 {
+        font-size: 1rem;;
+    }
+    .js-carrousel-prev span:nth-child(1), .js-carrousel-next  span:nth-child(1) {
+        padding-bottom:4%;
+    }
 }
