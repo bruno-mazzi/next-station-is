@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'led_counter';
     src: url('../fonts/led_counter-7.woff2') format('woff2'),
-         url('../fonts/led_counter-7.woff') format('woff');
+        url('../fonts/led_counter-7.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'open_sansregular';
     src: url('../fonts/opensans-regular.woff2') format('woff2'),
-         url('../fonts/opensans-regular.woff') format('woff');
+        url('../fonts/opensans-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'open_sanssemibold';
     src: url('../fonts/opensans-semibold.woff2') format('woff2'),
-         url('../fonts/opensans-semibold.woff') format('woff');
+        url('../fonts/opensans-semibold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -25,7 +25,7 @@
 @font-face {
     font-family: 'open_sansbold';
     src: url('../fonts/opensans-bold.woff2') format('woff2'),
-         url('../fonts/opensans-bold.woff') format('woff');
+        url('../fonts/opensans-bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -33,7 +33,7 @@
 @font-face {
     font-family: 'open_sansextrabold';
     src: url('../fonts/opensans-extrabold.woff2') format('woff2'),
-         url('../fonts/opensans-extrabold.woff') format('woff');
+        url('../fonts/opensans-extrabold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -41,15 +41,16 @@
 @font-face {
     font-family: 'open_sanslight';
     src: url('../fonts/opensans-light.woff2') format('woff2'),
-         url('../fonts/opensans-light.woff') format('woff');
+        url('../fonts/opensans-light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-body, html {
-    font-size:62.5%;
-    margin:0;
-    padding:0;
+body,
+html {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -67,24 +68,25 @@ body {
     flex: 1 1 0px
 }
 
+/* panneau lien */
 .sign {
     background: #404040;
     border-bottom: 5px solid #6A7177;
-    border-radius:2px;
+    border-radius: 2px;
     margin: 5%;
     padding: 0;
     width: 70%;
 }
 
 .sign header {
-    margin:0 1.5rem;
+    margin: 0 1.5rem;
 }
 
 .sign header:before {
     border-right: 4rem solid #80c342;
     content: "2";
     color: #ccc;
-    float:left;
+    float: left;
     font-family: 'open_sansbold', arial, sans-serif;
     font-size: 8rem;
     margin-right: 2rem;
@@ -95,7 +97,7 @@ body {
     color: #ccc;
     font-family: 'open_sanssemibold', arial, sans-serif;
     font-size: 3rem;
-    margin:0;
+    margin: 0;
     padding: 0.5rem 0 0 0;
 }
 
@@ -109,14 +111,14 @@ body {
 
 .sign nav {
     background: #101A0F;
-    clear:left;
-    margin:0 1.5rem 1.5rem 1.5rem;
+    clear: left;
+    margin: 0 1.5rem 1.5rem 1.5rem;
     overflow: auto;
 }
 
 .sign nav ul {
     background: #232520;
-    margin:1.5rem 4rem;
+    margin: 1.5rem 4rem;
     padding: 0.5rem;
 }
 
@@ -138,49 +140,49 @@ body {
     content: " ->";
 }
 
+/* panneau Bg */
 .sign2 {
     background: #fff url('../images/line-sign2.svg') center center no-repeat;
     background-size: 100% auto;
-    border-radius:2px;
+    border-radius: 2px;
     display: flex;
-    float:right;
+    float: right;
     margin: 5%;
+    min-height: 15rem;
     padding: 0;
     width: 70%;
 }
 
 .sign2 h3 {
+    align-content: flex-end;
     color: #000;
+    display: flex;
+    flex-direction: column;
     font-family: 'open_sanssemibold', arial, sans-serif;
     font-size: 2rem;
+    margin: 1rem 0 0 0;
 }
 
 .sign2 h3 span {
-    display: block;
-}
-
-.sign2 h3 span:nth-child(2) {
-    margin-top:4rem;
+    line-height: 6.5rem;
 }
 
 .sign2 .item {
-    text-align:center;
+    text-align: center;
 }
 
 .sign2 .js-carrousel-prev {
-    text-align:left;
+    text-align: left;
 }
 
 .sign2 .js-carrousel-next {
-    text-align:right;
+    text-align: right;
 }
 
-.sign2 .js-carrousel-prev, .sign2 .js-carrousel-next {
-    align-self: end;
-}
-
-.sign2 .js-carrousel-prev h3, .sign2 .js-carrousel-next h3 {
+.sign2 .js-carrousel-prev h3,
+.sign2 .js-carrousel-next h3 {
     font-weight: 400;
+    margin-top: 6rem;
 }
 
 .sign2 .js-carrousel-prev h3 {
@@ -191,23 +193,29 @@ body {
     padding-right: 1.5rem;
 }
 
-.sign2 .js-carrousel-prev h3 span:nth-child(1), .sign2 .js-carrousel-next h3 span:nth-child(1) {
-    color:#fff;
+.sign2 .js-carrousel-prev h3 span,
+.sign2 .js-carrousel-next h3 span {
+    line-height: 3rem;
 }
 
-.sign2 .js-carrousel-prev h3 span:nth-child(2), .sign2 .js-carrousel-next h3 span:nth-child(2) {
-    margin:1rem 0;
+.sign2 .js-carrousel-prev h3 span:nth-child(1),
+.sign2 .js-carrousel-next h3 span:nth-child(1) {
+    color: #fff;
 }
 
 /* responsive */
 @media screen and (max-width: 1525px) {
-    .sign, .sign2 {
+
+    .sign,
+    .sign2 {
         width: 80%;
     }
 }
 
 @media screen and (max-width: 1340px) {
-    .sign, .sign2 {
+
+    .sign,
+    .sign2 {
         width: 90%;
     }
 }
@@ -226,7 +234,8 @@ body {
     }
 
     .sign2 h3 {
-        font-size: 1.5rem;;
+        font-size: 1.5rem;
+        ;
     }
 }
 
@@ -239,7 +248,8 @@ body {
         flex-grow: 3;
     }
 
-    .sign, .sign2 {
+    .sign,
+    .sign2 {
         width: 70%;
     }
 }
@@ -256,8 +266,9 @@ body {
 
 @media screen and (max-width: 450px) {
     .sign header::before {
-        font-size:7rem;
+        font-size: 7rem;
     }
+
     .sign h1 {
         font-size: 1.5rem;
     }
@@ -267,9 +278,26 @@ body {
     }
 
     .sign2 h3 {
-        font-size: 1rem;;
+        font-size: 1rem;
+        margin-top: 2rem;
     }
-    .js-carrousel-prev span:nth-child(1), .js-carrousel-next  span:nth-child(1) {
-        padding-bottom:4%;
+
+    .sign2 h3 span {
+        line-height: 5.5rem;
+    }
+
+    .js-carrousel-prev span:nth-child(1),
+    .js-carrousel-next span:nth-child(1) {
+        padding-bottom: 4%;
+    }
+
+    .sign2 .js-carrousel-prev h3,
+    .sign2 .js-carrousel-next h3 {
+        margin-top: 6.5rem;
+    }
+
+    .sign2 .js-carrousel-prev h3 span,
+    .sign2 .js-carrousel-next h3 span {
+        line-height: 2rem;
     }
 }
