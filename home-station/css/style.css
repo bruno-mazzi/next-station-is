@@ -48,6 +48,7 @@
 
 body,
 html {
+    font-family: 'open_sansregular';
     font-size: 62.5%;
     margin: 0;
     padding: 0;
@@ -61,11 +62,27 @@ body {
 
 .container {
     display: flex;
-    min-height: 100vh;
+    min-height: 96vh;
 }
 
 .item {
     flex: 1 1 0px
+}
+
+footer {
+    background: #80c342;
+    height: 4vh;
+    overflow: auto;
+}
+
+footer p {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    padding:0 0.5rem;
+}
+
+footer a {
+    color:#232520;
 }
 
 /* panneau lien */
