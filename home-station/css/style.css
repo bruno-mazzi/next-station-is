@@ -100,6 +100,7 @@ footer button {
     border:0;
     cursor: pointer;
     padding:0 0.4rem;
+    text-align:left;
 }
 
 footer button span {
@@ -358,6 +359,15 @@ footer button:before {
     .sign2 .js-carrousel-prev h3 span,
     .sign2 .js-carrousel-next h3 span {
         line-height: 2rem;
+    }
+
+    .accueil {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .accueil .container {
+        flex-grow:2;
     }
 
     footer {
