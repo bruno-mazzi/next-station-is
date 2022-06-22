@@ -97,6 +97,8 @@ var sliderPanel = (function () {
             var eleNext = document.getElementsByClassName('js-carrousel-next');
             var maskInter = document.getElementById('maskInterface');
 
+            maskInter.style.display = 'inline-block';
+
             maskInter.addEventListener("click", function () {
                 sliderPanel.maskInter()
             }, false);
