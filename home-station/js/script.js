@@ -3,27 +3,27 @@ var sliderPanel = (function () {
             var listBG = [{
                     nameJp: '屋久島',
                     nameOc: 'Yakushima',
-                    img: 'yakushima.jpg'
+                    img: 'yakushima.webp'
                 },
                 {
                     nameJp: '彦根市',
                     nameOc: 'Hikone',
-                    img: 'hikone_castle.jpg'
+                    img: 'hikone_castle.webp'
                 },
                 {
                     nameJp: '礼文島',
                     nameOc: 'île Rebun',
-                    img: 'rebun.jpg'
+                    img: 'rebun.webp'
                 },
                 {
                     nameJp: '横浜市',
                     nameOc: 'Yokohama',
-                    img: 'yokohama.jpg'
+                    img: 'yokohama.webp'
                 },
                 {
                     nameJp: '大阪市',
                     nameOc: 'Osaka',
-                    img: 'osaka.jpg'
+                    img: 'osaka.webp'
                 }
             ]
 
@@ -93,20 +93,24 @@ var sliderPanel = (function () {
         document.addEventListener("DOMContentLoaded", function () {
             sliderPanel.initBG();
 
-            var elePrev = document.getElementsByClassName('js-carrousel-prev');
-            var eleNext = document.getElementsByClassName('js-carrousel-next');
             var maskInter = document.getElementById('maskInterface');
-
-            maskInter.style.display = 'inline-block';
+            var prev = document.querySelectorAll("#js-njp0, #js-noc0");
+            var next =  document.querySelectorAll("#js-njp2, #js-noc2");
 
             maskInter.addEventListener("click", function () {
                 sliderPanel.maskInter()
             }, false);
 
-            elePrev[0].addEventListener("click", function () {
+            prev[0].addEventListener("click", function () {
                 sliderPanel.changeBG("p")
             }, false);
-            eleNext[0].addEventListener("click", function () {
+           next[0].addEventListener("click", function () {
+                sliderPanel.changeBG("n")
+            }, false);
+            prev[1].addEventListener("click", function () {
+                sliderPanel.changeBG("p")
+            }, false);
+           next[1].addEventListener("click", function () {
                 sliderPanel.changeBG("n")
             }, false);
         });

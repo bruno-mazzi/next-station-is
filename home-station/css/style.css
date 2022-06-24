@@ -4,6 +4,7 @@
         url('../fonts/led_counter-7.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
         url('../fonts/opensans-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -20,6 +22,7 @@
         url('../fonts/opensans-semibold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -28,6 +31,7 @@
         url('../fonts/opensans-bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -36,6 +40,7 @@
         url('../fonts/opensans-extrabold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -44,6 +49,16 @@
         url('../fonts/opensans-light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'noto-regular';
+    src: url('../fonts/noto-sans-jp-regular.woff2') format('woff2'),
+        url('../fonts/noto-sans-jp-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* var */
@@ -81,6 +96,10 @@
 	white-space: normal !important;
 }
 
+.skip-to-content {
+    background:hsl(0, 0%, 100%);
+}
+
 /* general */
 html {
     height: -webkit-fill-available;
@@ -94,7 +113,7 @@ html, body {
 }
 
 body {
-    background: url('../images/hikone_castle.jpg') center center no-repeat;
+    background: url('../images/hikone_castle.webp') center center no-repeat fixed;
     background-size: cover;
 }
 
@@ -115,7 +134,7 @@ body {
 }
 
 .mentions {
-    background: url('../images/toiture.jpg') center center no-repeat;
+    background: url('../images/toiture.webp') center center no-repeat;
     display: flex;
 }
 
@@ -133,6 +152,7 @@ body {
     background:  	hsl(0, 0%, 25%);
     border-bottom: 5px solid hsl(208, 6%, 44%);
     border-radius: 2px;
+    font-size:1rem;
     margin: 4% auto 0 auto;
     max-width:600px;
     padding: 0;
@@ -150,7 +170,7 @@ body {
     color: hsl(0, 0%, 80%);
     float: left;
     font-family: 'open_sansbold', arial, sans-serif;
-    font-size: 6.25rem;
+    font-size: 6.25em;
     margin-right: 16px;
     padding-right: 16px;
 }
@@ -162,7 +182,7 @@ body {
 .sign h1 {
     color: hsl(0, 0%, 80%);
     font-family: 'open_sanssemibold', arial, sans-serif;
-    font-size: 2rem;
+    font-size: 2em;
     margin: 0;
     padding: 8px 0 0 0;
 }
@@ -170,7 +190,7 @@ body {
 .sign h2 {
     color: hsl(0, 0%, 80%);
     font-family: 'open_sansregular', arial, sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.4em;
     font-weight: 400;
     margin: 0;
 }
@@ -188,7 +208,7 @@ body {
 }
 
 .sign nav li {
-    font-size: 1.8rem;
+    font-size: 1.8em;
     list-style-type: none;
 }
 
@@ -214,30 +234,41 @@ body {
     background: hsl(0, 0%, 100%)url('../images/line-sign3.svg') center center no-repeat;
     background-size: 100% auto;
     border-radius: 2px;
+    color: hsl(0, 0%, 0%);
     display: grid;
-    grid-template-rows: minmax(0, 1fr);
+    font-size: 1rem;
+    grid-template-rows: minmax(70px, 1fr) 40px minmax(70px, 1fr);
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 4% auto 0 auto;
+    margin: 4% auto 32px auto;
     max-width:600px;
     padding: 0;
     width: 100%;
 }
 
-.sign2 h3 {
-    color: hsl(0, 0%, 0%);
-    display: grid;
-    grid-template-rows: minmax(80px, 1fr) 40px minmax(80px, 1fr);
-    grid-template-columns: minmax(0, 1fr);
+.sign2 > * {
     font-family: 'open_sanssemibold', arial, sans-serif;
-    font-size: 2rem;
-    margin: 0;
+    word-break: break-all;
 }
 
-#js-njp0, #js-njp2 {
+#js-njp0 {
+    color: #fff;
+    grid-column: 1 /2;
     grid-row: 2 / 3;
 }
 
-#js-noc0, #js-noc2 {
+#js-noc0 {
+    grid-column: 1 /2;
+    grid-row: 3 / 4;
+}
+
+#js-njp2 {
+    color: #fff;
+    grid-column: 3 /4;
+    grid-row: 2 / 3;
+}
+
+#js-noc2 {
+    grid-column: 3 /4;
     grid-row: 3 / 4;
 }
 
@@ -247,7 +278,8 @@ body {
 
 #js-njp0, #js-njp2, #js-noc0, #js-noc2 {
     align-self: center;
-    font-size: 1.4rem;
+    cursor: pointer;
+    font-size: 1.2em;
 }
 
 #js-njp2, #js-noc2 {
@@ -256,22 +288,40 @@ body {
 }
 
 #js-njp1 {
+    grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
 
 #js-noc1 {
+    grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
 
 #js-njp1, #js-noc1 {
     align-self: center;
-    font-size: 1.8rem;
+    font-size: 1.6em;
     justify-self: center
 }
 
-.sign2 .js-carrousel-prev h3 span:nth-child(1),
-.sign2 .js-carrousel-next h3 span:nth-child(1) {
-    color: #fff;
+#js-noc0, #js-noc1, #js-noc2 {
+    line-height: 1;
+}
+
+[lang="ja"] {
+    font-family: 'noto-regular', arial, sans-serif;
+}
+
+/* mentions */
+.inner-mentions {
+    background: rgba(255, 255, 255, 0.8);
+    font-size:1rem;
+    margin: auto;
+    padding: 32px;
+    width:80%;
+}
+
+.inner-mentions a {
+    color: hsl(115, 27%, 8%);
 }
 
 /* footer */
@@ -307,10 +357,6 @@ footer button:before {
     content: "- ";
 }
 
-#maskInterface {
-    display: none;
-}
-
 @media screen and (max-width: 75rem) {
     .container > * {
         padding: 0 8px;
@@ -328,5 +374,29 @@ footer button:before {
 }
 
 @media screen and (max-width: 37.5rem) {
+    .sign, .sign2 {
+        font-size:0.8rem;
+    }
+}
+
+@media screen and (max-width: 28.125rem) {
+    .sign, .sign2 {
+        font-size:0.6rem;
+    }
+
+    .sign2 {
+        grid-template-rows: minmax(50px, 1fr) 40px minmax(50px, 1fr);
+    }
+
+    #js-njp0, #js-noc0 {
+        padding-left:16px;
+    }
     
+    #js-njp2, #js-noc2 {
+        padding-right:16px;
+    }
+
+    .sign nav ul {
+        margin: 16px;
+    }
 }
